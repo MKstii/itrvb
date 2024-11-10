@@ -9,4 +9,16 @@ class Rate{
         $this->rate = $rate;
         $this->message = $message;
     }
+
+    public function getUser(){
+        return $this->user;
+    }
+
+    public function getRate(){
+        return $this->rate;
+    }
+
+    public function getMessage(){
+        return $this->message;
+    }
 }

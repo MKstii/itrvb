@@ -3,15 +3,15 @@ class Cart{
     private array $items;
     private float $totalPrice;
     public function __construct(){
-        $items = array();
-        $totalPrice = 0;
+        $this->items = array();
+        $this->totalPrice = 0;
     }
     public function getTotalPrice(){
         return $this->totalPrice;
     }
     public function addProduct(Product $item){
         $this->items[] = $item;
-        $this->totalPrice += $item.getPrice();
+        $this->totalPrice += $item->getPrice();
     }
     public function removeProduct(Product $item){
         foreach ($this->items as $key => $product) {
@@ -25,5 +25,9 @@ class Cart{
 
     public function pay(){
         //функция оплаты
+    }
+
+    public function getItems(){
+        return $this->items;
     }
 }

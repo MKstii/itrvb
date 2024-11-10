@@ -17,4 +17,12 @@ class User
     public function changePassword(string $password){
         $this->password = password_hash($password, PASSWORD_BCRYPT);
     }
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getEmail(){
+        return $this->email;
+    }
 }

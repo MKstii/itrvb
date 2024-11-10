@@ -51,4 +51,8 @@ class Product{
     public function addRate(Rate $rate){
         $this->rates[] = $rate;
     }
+
+    public function getRates(){
+        return $this->rates;
+    }
 }
